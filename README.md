@@ -15,3 +15,6 @@ Instructions for Andrews & Arnold are [here](https://support.aa.net.uk/VoIP_Phon
 Please read through `extensions.conf` and `pjsip.conf` fully, as there will be sections you wish to change!
 
 To install, install asterisk from source, then run `install.sh`
+
+## Installing Asterisk
+[Read on Asterisk Docs](https://docs.asterisk.org/Getting-Started/Installing-Asterisk/Installing-Asterisk-From-Source/Building-and-Installing-Asterisk/)
