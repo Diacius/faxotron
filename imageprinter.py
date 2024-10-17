@@ -1,3 +1,4 @@
+# Extremely bodged script to print out the fax TIFF image onto the thermal printer. This uses my Pipsta/AP1400 specific image printing code.
 from escpos.printer import Usb
 import time
 import pipsta_constants
@@ -23,7 +24,7 @@ def pipsta_image(imageName, isFax):
     '''
     if isFax:
         os.system(f"convert {imageName} -resize 384x543\\! fixed.png")
-        # reset the image name because we resized
+        # reset the image name because we resized and its no longer the original file that needs to be used.
         imageName = "fixed.png"
     # Create IO object from the passed in bytes and "open" it
     im = Image.open(imageName) # Open the colour image
@@ -98,7 +99,6 @@ def image(filename):
     printerObject._raw(pipsta_constants.ENTER_SPOOLING)
     printerObject.hw('INIT') 
     # Ensure that the printer is initialised, in case underline or other formatting is left on.
-    #printerObject._raw(SET_FONT_MODE_3) # Set the font to 3, TODO: Is this needed? If so, why?
     # If we are using a pipsta use my code
     # Returns an array of raw data to send, one item per command
     printerObject._raw(pipsta_constants.invertedPrinting(False))
