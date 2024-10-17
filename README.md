@@ -9,7 +9,8 @@ The config assumes a few things that you may wish to change:
  - That you want the fax images stored in /tmp/faxes
  - And finally, that you want a preconfigured PJSIP extention so that you can dial into the fax server locally.
 
-If you want to be able to call into the server from PSTN you will need to configure a trunk in pjsip.conf
+If you want to be able to call into the server from PSTN you will need to configure a trunk in pjsip.conf.
+
 Instructions for Andrews & Arnold are [here](https://support.aa.net.uk/VoIP_Phones_-_Asterisk)
 
 Please read through `extensions.conf` and `pjsip.conf` fully, as there will be sections you wish to change!
